@@ -11,17 +11,17 @@ The application overview page shows the status of each device in the application
 
 Each device can have one of the following statuses:
 
-| Status            | Description                                                                                                                                                     |
-|-------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Online            | The device is online and is connected to the VPN or has recent API communications.                                                                              |
-| Configuring       | The device is applying OS configuration.                                                                                                                        |
-| Updating          | The device is updating to a new application release.                                                                                                            |
-| Offline           | The device is offline and is not connected to VPN and has not any recent API communications.                                                                    |
-| Post Provisioning | The device has been [provisioned][device-provisioning] but has not yet come online.                                                                             |
-| Inactive          | The device has been [deactivated][deactivated] or has been [preregistered][preregistered] but has not yet connected to the {{ $names.cloud.lower }} API.        |
-| Frozen            | The device has been frozen because it's outside the organization's allowance, or is in a paid [application type][application type] on a free tier organization. |
-
-## Device connectivity
+| Status                  | Description                                                                                                                                                     |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Online                  | The device is online, connected to the VPN, and has recent API communications.                                                                                  |
+| Online (VPN Only)       | The device is online, is connected to the VPN, but has **no recent API communications**.                                                                        |
+| Online (Heartbeat Only) | The device is online, has recent API communications, but is **not connected to the VPN**.                                                                       |
+| Offline                 | The device is offline.                                                                                                                                          |
+| Configuring             | The device is applying OS configuration.                                                                                                                        |
+| Updating                | The device is updating to a new application release.                                                                                                            |
+| Post Provisioning       | The device has been [provisioned][device-provisioning] but has not yet come online.                                                                             |
+| Inactive                | The device has been [deactivated][deactivated] or has been [preregistered][preregistered] but has not yet connected to the {{ $names.cloud.lower }} API.        |
+| Frozen                  | The device has been frozen because it's outside the organization's allowance, or is in a paid [application type][application type] on a free tier organization. |
 
 ![Device connectivity indicators](/img/common/main_dashboard/device_status.png)
 
